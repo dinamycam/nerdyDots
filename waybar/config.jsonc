@@ -1,0 +1,66 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": [
+	    "sway/language", 
+	    "battery", 
+	    "backlight", 
+	    "clock", 
+	    "cpu",
+	    "tray"
+    ],
+    "sway/window": {
+        "max-length": 50
+    },
+    "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""]
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+    "sway/language": {
+    "format": "{flag} {short} {variant}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+    },
+
+    "cpu": {
+	"interval": 1,
+     	"format": "{icon0}{icon1}{icon2}{icon3}",
+     	"format-icons": [
+          "<span color='#69ff94'>▁</span>", // green
+          "<span color='#2aa9ff'>▂</span>", // blue
+          "<span color='#2aa9ff'>▂</span>", // blue
+          "<span color='#f8f8f2'>▃</span>", // white
+          "<span color='#f8f8f2'>▄</span>", // white
+          "<span color='#ffffa5'>▅</span>", // yellow
+          "<span color='#ffffa5'>▆</span>", // yellow
+          "<span color='#ff9977'>▇</span>", // orange
+          "<span color='#dd532e'>█</span>"  // red
+     ]
+    },
+    "sway/mode": {
+    	"format": " {}",
+    	"max-length": 30
+    },
+    "sway/window": {
+	"format": "{title}",
+    	"max-length": 30,
+    	"rewrite": {
+       	"(.*)Min": "🌎 $1",
+       	"nvim (.*)": " $1",
+       	"Alacritty(.*)": " [$1]"
+       	//"(.*) - fish": " [$1]",
+    }
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}
