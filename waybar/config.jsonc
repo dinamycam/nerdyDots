@@ -1,6 +1,11 @@
 {
+    // structure
     "layer": "top",
-    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-left": [
+	    "sway/workspaces", 
+	    "sway/mode",
+            "sway/scratchpad"
+    ],
     "modules-center": ["sway/window"],
     "modules-right": [
 	    "sway/language", 
@@ -10,9 +15,17 @@
 	    "cpu",
 	    "tray"
     ],
-    "sway/window": {
-        "max-length": 50
+
+    // General modules
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
     },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+
+    // Power management
     "backlight": {
     "device": "intel_backlight",
     "format": "{percent}% {icon}",
@@ -22,14 +35,6 @@
         "format": "{capacity}% {icon}",
         "format-icons": ["", "", "", "", ""]
     },
-    "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
-    },
-    "sway/language": {
-    "format": "{flag} {short} {variant}",
-    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
-    },
-
     "cpu": {
 	"interval": 1,
      	"format": "{icon0}{icon1}{icon2}{icon3}",
@@ -45,6 +50,23 @@
           "<span color='#dd532e'>█</span>"  // red
      ]
     },
+
+    // sway related
+    "sway/scratchpad": {
+	"format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "sway/window": {
+        "max-length": 50
+    },
+    "sway/language": {
+    "format": "{flag} {short} {variant}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+    },
+
     "sway/mode": {
     	"format": " {}",
     	"max-length": 30
@@ -53,14 +75,11 @@
 	"format": "{title}",
     	"max-length": 30,
     	"rewrite": {
-       	"(.*)Min": "🌎 $1",
+       	"(.*)Min": "🌎 Min $1",
        	"nvim (.*)": " $1",
+       	"vim (.*)": " $1",
        	"Alacritty(.*)": " [$1]"
        	//"(.*) - fish": " [$1]",
     }
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
     }
 }
