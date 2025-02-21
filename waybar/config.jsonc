@@ -10,34 +10,55 @@
         "sway/window"
     ],
     "modules-right": [
+        "clock",
         "sway/language",
         "network",
         "pulseaudio",
-        "battery",
         "backlight",
-        "clock",
+        "battery",
         "cpu",
         "memory",
+	"custom/notification",
         "tray"
     ],
     // General modules
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{essid} ({signalStrength}%)  ",
         "format-ethernet": " {ifname}",
         "tooltip-format": " {ifname} via {gwaddr}",
         "format-linked": " {ifname} (No IP)",
-        "format-disconnected": "Disconnected ⚠ {ifname}",
-        "format-alt": " {ifname}: {ipaddr}/{cidr}"
+        "format-disconnected": "⚠ Disconnected {ifname}",
+        "format-alt": " {ifname}:{ipaddr}/{cidr}"
     },
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "tray": {
         "icon-size": 16,
         "spacing": 10
     },
+    "custom/notification": {
+	"tooltip": false,
+    	"format": "{} {icon}",
+    	"format-icons": {
+      	"notification": " <span foreground='red'><sup></sup></span>",
+      	"none": " ",
+      	"dnd-notification": " <span foreground='red'><sup></sup></span>",
+      	"dnd-none": " ",
+      	"inhibited-notification": " <span foreground='red'><sup></sup></span>",
+      	"inhibited-none": " ",
+      	"dnd-inhibited-notification": " <span foreground='red'><sup></sup></span>",
+      	"dnd-inhibited-none": " "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
     "pulseaudio": {
         "interval": 3,
         "scroll-step": 5, // %, can be a float
@@ -46,11 +67,11 @@
         "format-bluetooth-muted": "  {icon} {format_source}",
         "format-muted": "  {format_source}",
         "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format-source-muted": " ",
         "format-icons": {
-                       "headphone": "",
-                       "hands-free": "",
-                       "headset": "",
+                       "headphone": " ",
+                       "hands-free": " ",
+                       "headset": " ",
                        "phone": "",
                        "portable": "",
                        "car": "",
