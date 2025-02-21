@@ -1,8 +1,11 @@
 for_window [app_id="galculator"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_role="dialog"] floating enable
+for_window [instance="oblivion-desktop"] floating enable
+
 assign [instance="min"] 2
 
 # attach xwayland flag for legacy apps
 for_window [shell="xwayland"] title_format "[XWayland] %title"
+for_window [app_id="Alacritty"] title_format "Alacritty %title"
 
