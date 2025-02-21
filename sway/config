@@ -24,7 +24,7 @@ input * {
     xkb_variant dvorak,
     xkb_options caps:swapescape,grp:alt_shift_toggle
 }
-input "2:7:SynPS/2_Synaptics_TouchPad" {
+input type:touchpad {
     # Enable tap to click for touchpads
     tap enabled
     # click_method button_areas
@@ -239,3 +239,4 @@ bar {
 }
 
 include /etc/sway/config.d/*
+include window_rules
