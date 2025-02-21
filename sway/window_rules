@@ -1,11 +1,17 @@
 for_window [app_id="galculator"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_role="dialog"] floating enable
+for_window [app_id="nwg-look"] floating enable
 for_window [instance="oblivion-desktop"] floating enable
+for_window [app_id="org.Waytrogen.Waytrogen"] floating enable
+for_window [app_id="waytrogen"] floating enable
 
 assign [instance="min"] 2
+assign [app_id="org.telegram.desktop"] 5
+assign [instance="code"] 3
 
 # attach xwayland flag for legacy apps
 for_window [shell="xwayland"] title_format "[XWayland] %title"
+# add Alacritty to the title
 for_window [app_id="Alacritty"] title_format "Alacritty %title"
 
