@@ -158,16 +158,18 @@
         "max-length": 30
     },
     "sway/window": {
-        "format": "{title}",
+        "format": "{app_id} {title}",
         "max-length": 50,
         "rewrite": {
-            "(.*)Min": "🌎 Min $1",
-            "nvim (.*)": " $1",
-            "vim (.*)": " $1",
-            "(.*) Visual Studio Code": "$1 󰨞 ",
-            "Alacritty(.*)": " [$1]",
-            "(.*) pouya(.*)": "  [$1]"
-            //"(.*) - fish": " [$1]",
+            "Min (.*)": "🌎 $1",
+            "(.*)neovide(.*)": "$1 $2",
+            "(.*)nvim(.*)": "$1$2",
+            "(.*)vim(.*)": "$1$2",
+            "(.*) Visual Studio Code(.*)": "󰨞 $1",
+            "org.telegram.desktop (.*)": "  [$1]",
+            "oblivion-desktop (.*)": "  [$1]",
+            "Alacritty (.*)": " $1"
+	    //   for music
         }
     },
     "sway/workspaces": {
