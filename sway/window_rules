@@ -5,6 +5,7 @@ for_window [app_id="nwg-look"] floating enable
 for_window [instance="oblivion-desktop"] floating enable
 for_window [app_id="org.Waytrogen.Waytrogen"] floating enable
 for_window [app_id="waytrogen"] floating enable
+for_window [app_id="nwg-displays"] floating enable
 
 assign [instance="min"] 2
 assign [app_id="org.telegram.desktop"] 5
