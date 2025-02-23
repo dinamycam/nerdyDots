@@ -243,6 +243,11 @@ bindsym $mod+r mode "resize"
 		# Special key to take a screenshot with grim
 		bindsym Print exec grim
 
+#
+# Appearance
+#
+		gaps inner 5
+		gaps outer 0
 
 #
 # Status Bar:
