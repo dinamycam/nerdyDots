@@ -189,12 +189,22 @@ exec waytrogen -r
 #
 # Applications
 #
-# Notification Daemon
-exec swaync
-exec ianny
-# Toggle control center
-bindsym $mod+Shift+n exec swaync-client -t -sw
+		# Gnome keyring
+		exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+		exec dbus-update-activation-environment --all
+		exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg
+		exec export $(gnome-keyring-daemon)
+		# Notification Daemon
+		exec swaync
+		# No Strain
+		exec ianny
+		# Toggle control center
+		bindsym $mod+Shift+n exec swaync-client -t -sw
 
+#
+# Auto-start Applications
+#
+		bindsym $mod+m exec --no-startup-id foot -e rmpc
 #
 # Resizing containers:
 #
