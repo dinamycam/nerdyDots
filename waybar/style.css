@@ -1,89 +1,67 @@
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
-  /* font-family: "Noto Sans CJK KR Regular"; */
-  /*font-family: "FiraCode Nerd Font";*/
-  font-family: "CaskaydiaCove Nerd Font";
-  /*font-family: "D2CodingLigature Nerd Mono";*/
-  font-size: 13px;
-  min-height: 0;
+    border: none;
+    border-radius: 0px;
+    /* `otf-font-awesome` is required to be installed for icons */
+    /*font-family: Font Awesome, Roboto;*/
+  font-family: CaskaydiaCove Nerd Font, Font Awesome;
+    font-size: 13px;
+    min-height: 0;
+    /*border-radius: 20px;*/
+    /*color: yellowgreen;*/
 }
 
 window#waybar {
-  background: transparent;
-  /*    background-color: rgba(43, 48, 59, 0.5); */
-  /*    border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-  color: #ffffff;
-  transition-property: background-color;
-  transition-duration: .5s;
+    /*background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(6, 66, 115, 1) 55%, rgba(63,94,251,1) 100%);     */
+		background: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 window#waybar.hidden {
-  opacity: 0.2;
-}
-
-#waybar.empty #window {
-  background-color: transparent;
+    opacity: 0.3;
 }
 
 #workspaces {
-}
-
-#window {
-  margin: 2;
-  padding-left: 8;
-  padding-right: 8;
-  background-color: rgba(0,0,0,0.3);
-  font-size:14px;
-  font-weight: bold;
-}
-
-button {
-  /* Use box-shadow instead of border so the text isn't offset */
-  box-shadow: inset 0 -3px transparent;
-  /* Avoid rounded borders under each button name */
-  border: none;
-  border-radius: 0;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-  background: inherit;
-  border-top: 2px solid #c9545d;
+    padding: 15px;
+    margin-right: 3px;
+    opacity: 0.88;
 }
 
 #workspaces button {
-  padding: 0 4px;
-  /*    background-color: rgba(0,0,0,0.3); */
+    color: #61B2BC;
+    font-weight:bold;
+    margin: 0px;
+    padding: 3px 3px 3px 6px;
 }
 
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
+    background: rgba(4,52,61,1);
+    color: teal;
 }
 
 #workspaces button.focused {
-  /*    box-shadow: inset 0 -2px #c9545d; */
-  background-color: rgba(0,0,0,0.3);
-  color:#c9545d;
-  border-top: 2px solid #c9545d;
+    background: #1f1f1f;
+    color: teal;
 }
 
-#workspaces button.active {
-  /*    box-shadow: inset 0 -2px #c9545d; */
-  background-color: rgba(0,0,0,0.3);
-  color:#c9545d;
-  border-top: 2px solid #c9545d;
+#workspaces button.focused:hover {
+    background: rgba(4,52,61,1);
+    color: black;
 }
 
-#workspaces button.urgent {
-  background-color: #eb4d4b;
+tooltip {
+				background: teal;
+        color: #A1BDCE;
+        font-size: 17px;
+        border-radius: 5px;
+        border: 1px solid #101a24;
 }
-
-#mode {
-  background-color: #64727D;
-  border-bottom: 3px solid #ffffff;
+tooltip label {
+   color: #CBD6D7;
 }
 
 #clock,
-#battery,
 #cpu,
 #memory,
 #disk,
@@ -91,109 +69,169 @@ button:hover {
 #backlight,
 #network,
 #pulseaudio,
-#wireplumber,
 #custom-media,
-#tray,
-#mode,
+#custom-launcher,
+#custom-power,
+#custom-layout,
+#custom-updater,
+#custom-snip,
+#custom-network,
+#custom-wallpaper,
+#custom-layout,
+#taskbar,
+#workspaces,
 #idle_inhibitor,
-#scratchpad,
 #mpd {
-  margin: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
-  background-color: rgba(0,0,0,0.3);
-  color: #ffffff;
+    padding: 7;
+		color: #c0bfbc;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
+#memory,#pulseaudio{
+		color: #CBD6D7;
+}
+#backlight {
+		color: #E0A853;
+}
+#window{
+    margin: 4px 14px;
+    font-weight:bold;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
+#battery,#network{
+    font-size: 14px;
+		color: #61B2BC;
 }
 
-#clock {
-  font-size:14px;
-  font-weight: bold;
-}
-
-#battery icon {
-  color: red;
+#mode {
+	padding: 6;
+  /*background-color: #64727D;*/
+  border-bottom: 1px solid #ffffff;
 }
 
 #battery.charging, #battery.plugged {
-  color: #ffffff;
-  background-color: #26A65B;
+    /*color: #aaffff;*/
+    color: #99c1f1;
 }
 
 @keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: #000000;
-  }
-}
-
-#battery.warning:not(.charging) {
-  background-color: #f53c3c;
-  color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
 }
 
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
-  color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 label:focus {
-  background-color: #000000;
+    background-color: #000000;
 }
 
 #network.disconnected {
-  background-color: #f53c3c;
+    color: red;
+}
+
+#pulseaudio {
+    font-size: 15px;
+}
+
+#pulseaudio.muted {
+    color: #DECA3F;
+}
+
+#custom-media{
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+#custom-power{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
+}
+
+#custom-launcher{
+    font-size: 20px;
+    margin-left: 5px;
+    color: #dd3366;
+    border: 2px solid #c9545d;
+}
+
+#custom-updater {
+    color:black;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
+}
+
+#custom-snip {
+    font-size: 20px;    
+}
+
+#clock,
+#language{
+    font-size: 14px;
+}
+
+#custom-wallpaper,
+#custom-network,
+#custom-snip{
+    font-size: 20px;
 }
 
 #temperature.critical {
-  background-color: #eb4d4b;
+    background-color: #eb4d4b;
 }
 
-#idle_inhibitor.activated {
-  background-color: #ecf0f1;
-  color: #2d3436;
+#tray{
+    margin: 0px 5px 0px 5px;
 }
 
 #tray > .passive {
-  -gtk-icon-effect: dim;
+    -gtk-icon-effect: dim;
+    background-color: #171717;
+    color: #ffffff;
 }
 
 #tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
+    -gtk-icon-effect: highlight;
+    background-color: #171717;
+    color: #ffffff;
 }
 
-/*
-
-window#waybar.solo {
-background-color: #FFFFFF;
+#idle_inhibitor {
+    font-size: 18px;
+    padding: 10px;
+    background: linear-gradient(-90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
 }
 
-window#waybar.termite {
-background-color: #3F3F3F;
+#idle_inhibitor.activated {
+    color: #ffffff;
+    background: linear-gradient(-90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
 }
 
-window#waybar.chromium {
-background-color: #000000;
-border: none;
+#language {
+    min-width: 16px;
 }
- */
+
+#keyboard-state {
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0px 4px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
