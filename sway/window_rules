@@ -10,6 +10,7 @@ for_window [app_id="flameshot"] floating enable
 for_window [app_id="orage"] floating enable
 
 assign [instance="min"] 2
+assign [app_id="foot"] 4
 assign [app_id="org.telegram.desktop"] 5
 assign [instance="code"] 3
 
