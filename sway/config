@@ -242,5 +242,6 @@ bar {
     swaybar_command waybar
 }
 
+include swayfx
 include /etc/sway/config.d/*
 include window_rules
