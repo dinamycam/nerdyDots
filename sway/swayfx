@@ -1,0 +1,13 @@
+shadows enable
+# blur enable
+
+corner_radius 12
+dim_inactive_colors.unfocused #000000FF
+
+layer_effects "waybar" {
+    blur enable;
+    blur_xray enable;
+    blur_ignore_transparent enable;
+    shadows enable;
+    corner_radius 20;
+}
