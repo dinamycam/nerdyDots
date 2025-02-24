@@ -1,6 +1,11 @@
 sway/outputs
 sway/workspaces
+
+# all Electron-based Apps
 Min/
 Code/
 Electron/
 oblivion-desktop/
+obsidian/
+FreeTube/
+cattr/
