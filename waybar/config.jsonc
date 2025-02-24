@@ -124,15 +124,15 @@
         "interval": 1,
         "format": "{icon0}{icon1}{icon2}{icon3}",
         "format-icons": [
-            "<span color='#f8f8f2'>▁</span>", // green
-            "<span color='#2aa987'>▂</span>", // blue
-            "<span color='#2a7987'>▂</span>", // blue
-            "<span color='#efb8f2'>▃</span>", // white
-            "<span color='#e8b8f2'>▄</span>", // white
-            "<span color='#ffffa5'>▅</span>", // yellow
-            "<span color='#ffffa5'>▆</span>", // yellow
+            "<span color='#f8f8f2'>▁</span>", // milky
+            "<span color='#2aa987'>▂</span>", // lightgreen
+            "<span color='#2a7987'>▂</span>", // teal
+            "<span color='#efb8f2'>▃</span>", // pink
+            "<span color='#e8b8f2'>▄</span>", // pink
+            "<span color='#ffffa5'>▅</span>", // lightyellow
+            "<span color='#ffffa5'>▆</span>", // light
             "<span color='#ff9977'>▇</span>", // orange
-            "<span color='#dd532e'>█</span>" // red
+            "<span color='#dd532e'>█</span>" // lightred
         ]
     },
     "memory": {
