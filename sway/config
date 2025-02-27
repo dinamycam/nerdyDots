@@ -97,7 +97,7 @@ exec waytrogen -r
     # Exit sway (logs you out of your Wayland session)
     # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
     # bindsym $mod+Shift+r exec ~/.config/sway/script/powermenu.sh
-		bindsym $mod+Shift+r exec wleave
+		bindsym $mod+0 exec wleave --buttons-per-row 5 --show-keybinds -L 200 -R 300 -T 450 -B 350
 #
 # Moving around:
 #
