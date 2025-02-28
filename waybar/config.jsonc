@@ -168,7 +168,8 @@
             "(.*) Visual Studio Code(.*)": "󰨞 $1",
             "org.telegram.desktop (.*)": "  [$1]",
             "oblivion-desktop (.*)": "  [$1]",
-            "Alacritty (.*)": " $1"
+            "Alacritty (.*)": " $1",
+            "nwg-look (.*)": "  $1"
 	    //   for music
         }
     },
