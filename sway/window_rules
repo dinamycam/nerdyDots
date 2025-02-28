@@ -8,6 +8,7 @@ for_window [app_id="waytrogen"] floating enable
 for_window [app_id="nwg-displays"] floating enable
 for_window [app_id="flameshot"] floating enable
 for_window [app_id="orage"] floating enable
+for_window [app_id="org.gnome.seahorse.Application"] floating enable
 
 assign [instance="min"] 2
 assign [app_id="foot"] 4

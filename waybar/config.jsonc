@@ -169,7 +169,8 @@
             "org.telegram.desktop (.*)": "  [$1]",
             "oblivion-desktop (.*)": "  [$1]",
             "Alacritty (.*)": " $1",
-            "nwg-look (.*)": "  $1"
+            "nwg-look (.*)": "  $1",
+            "org.gnome.seahorse.Application (.*)": "  $1"
 	    //   for music
         }
     },
