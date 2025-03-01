@@ -171,7 +171,10 @@
             "Alacritty (.*)": " $1",
             "nwg-look (.*)": "  $1",
             "org.gnome.seahorse.Application (.*)": "  $1",
-            "nm-connection-editor (.*)": "󰿂 $1"
+            "nm-connection-editor (.*)": "󰿂 $1",
+            "thunar (.*)": "  $1",
+            "pcmanfm (.*)": "  $1",
+            "obsidian (.*)": " $1"
 	    //   for music
         }
     },
