@@ -58,7 +58,7 @@
       "text": "Controll Center"
     },
     "mpris": {
-      "image-size": 96,
+      "image-size": 95,
       "image-radius": 6
     },
     "backlight": {
@@ -98,20 +98,12 @@
         ]
       },
       "menu#powermode-buttons": {
-        "label": "", 
-        "position": "right",
-        "actions": [ 
+        "label": "", 
+        "position": "left",
+        "actions": [
           {
-            "label": "Performance",
-            "command": "powerprofilesctl set performance"
-          },
-          {
-            "label": "Balanced",
-            "command": "powerprofilesctl set balanced"
-          },
-          {
-            "label": "Power-saver",
-            "command": "powerprofilesctl set power-saver"
+            "label": "  reload swaync",
+            "command": "swaync-client --reload-config"
           }
         ]
       }
@@ -123,19 +115,15 @@
           "command": "nm-connection-editor"
         },
         {
-          "label": "",
-          "command": "blueman"
+          "label": "",
+          "command": "blueman-manager"
         },
         {
-          "label": "",
-          "command": "nwg-look"
+          "label": " ",
+          "command": "nwg-displays"
         },
         {
-          "label": "",
-          "command": "exo-open ~/ConfigHub"
-        },
-        {
-          "label": "",
+          "label": " ",
           "command": "ymuse"
         },
         {
@@ -143,12 +131,8 @@
           "command": "orage"
         },
         {
-          "label": "",
-          "command": "pamac-manager"
-        },
-        {
-          "label": "",
-          "command": "min"
+          "label": "",
+          "command": "nwg-look"
         }
       ]
     }
