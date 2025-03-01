@@ -170,7 +170,8 @@
             "oblivion-desktop (.*)": "  [$1]",
             "Alacritty (.*)": " $1",
             "nwg-look (.*)": "  $1",
-            "org.gnome.seahorse.Application (.*)": "  $1"
+            "org.gnome.seahorse.Application (.*)": "  $1",
+            "nm-connection-editor (.*)": "󰿂 $1"
 	    //   for music
         }
     },
