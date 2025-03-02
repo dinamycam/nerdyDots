@@ -258,5 +258,5 @@ bar {
 }
 
 include swayfx
-include /etc/sway/config.d/*
+include $HOME/.config/sway/config.d/*
 include window_rules
