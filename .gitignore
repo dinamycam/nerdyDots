@@ -12,3 +12,4 @@ cattr/
 btop/btop.log
 Popcorn-Time/
 Bitwarden/
+nvim/lazy-lock.json
