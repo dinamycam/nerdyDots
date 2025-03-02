@@ -198,7 +198,7 @@ exec waytrogen -r
 		# No Strain
 		exec ianny
 		# Toggle control center
-		bindsym $mod+Shift+n exec swaync-client -t -sw
+		bindsym $mod+n exec swaync-client -t -sw
 
 #
 # Auto-start Applications
