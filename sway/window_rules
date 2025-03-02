@@ -12,12 +12,12 @@ for_window [app_id="org.gnome.seahorse.Application"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
 
 assign [instance="min"] 2
-assign [app_id="foot"] 4
-assign [app_id="org.telegram.desktop"] 5
+assign [app_id="org.telegram.desktop"] 4
 assign [instance="code"] 3
+assign [app_id="foot"] 8
 
 # attach xwayland flag for legacy apps
-for_window [shell="xwayland"] title_format "[XWayland] %title"
+for_window [shell="xwayland"] title_format "[X] %title"
 # add Alacritty to the title
 for_window [app_id="Alacritty"] title_format "Alacritty %title"
 
