@@ -1,4 +1,4 @@
-# vi: ft=i3config
+# vi: ft=swayconfig
 
 for_window [app_id="galculator"] floating enable
 for_window [window_type="dialog"] floating enable
@@ -12,6 +12,10 @@ for_window [app_id="flameshot"] floating enable
 for_window [app_id="orage"] floating enable
 for_window [app_id="org.gnome.seahorse.Application"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
+for_window [app_id="tlpui"] {
+    floating enable,
+    resize set 950 650
+}
 
 assign [instance="min"] 2
 assign [app_id="org.telegram.desktop"] 4
