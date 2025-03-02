@@ -35,11 +35,11 @@
     }
   },
   "widgets": [
-    "label",
     "menubar",
     "buttons-grid",
-    "volume",
     "mpris",
+    "volume",
+    "backlight",
     "title",
     "dnd",
     "notifications"
@@ -55,21 +55,16 @@
     },
     "label": {
       "max-lines": 1,
-      "text": "Controll Center"
+      "text": "Control Center"
     },
     "mpris": {
       "image-size": 95,
       "image-radius": 6
     },
     "backlight": {
-      "label": "",
+      "label": " ",
       "device": "intel_backlight",
       "min": 10
-    },
-    "backlight#KB": {
-      "label": " ",
-      "device": "asus::kbd_backlight",
-      "subsystem": "leds"
     },
     "volume": {
       "label": ""
