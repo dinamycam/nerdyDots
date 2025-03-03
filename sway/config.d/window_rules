@@ -16,11 +16,13 @@ for_window [app_id="tlpui"] {
     floating enable,
     resize set 950 650
 }
+for_window [app_id="xdg-desktop-portal-gtk"] floating enable, resize set 500 500
 
 assign [instance="min"] 2
 assign [app_id="org.telegram.desktop"] 4
 assign [instance="code"] 3
 assign [app_id="foot"] 8
+assign [class="smplayer"] 9
 
 # attach xwayland flag for legacy apps
 for_window [shell="xwayland"] title_format "[X] %title"
