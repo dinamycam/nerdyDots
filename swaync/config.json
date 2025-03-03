@@ -106,7 +106,7 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "",
+          "label": " ",
           "command": "nm-connection-editor"
         },
         {
@@ -122,11 +122,11 @@
           "command": "ymuse"
         },
         {
-          "label": "",
+          "label": " ",
           "command": "orage"
         },
         {
-          "label": "",
+          "label": " ",
           "command": "nwg-look"
         }
       ]
