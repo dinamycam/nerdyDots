@@ -12,7 +12,7 @@
 
 window#waybar {
     /*background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(6, 66, 115, 1) 55%, rgba(63,94,251,1) 100%);     */
-		background: transparent;
+	background: transparent;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -27,6 +27,9 @@ window#waybar.hidden {
     opacity: 0.88;
 }
 
+#scratchpad {
+	color: #61B2BC;
+}
 #workspaces button {
     color: #61B2BC;
     font-weight:bold;
@@ -81,31 +84,34 @@ tooltip label {
 #taskbar,
 #workspaces,
 #idle_inhibitor,
+#custom-notification,
 #mpd {
-    padding: 7;
-		color: #c0bfbc;
+    padding: 5;
+	/*color: #c0bfbc;*/
+    color: #CBD6D7;
 }
 
 #memory,#pulseaudio{
-		color: #CBD6D7;
+    color: #CBD6D7;
 }
 #backlight {
-		color: #E0A853;
+	color: #E0A853;
 }
 #window{
     margin: 4px 14px;
+	color: #61B2BC;
     font-weight:bold;
 }
 
 #battery,#network{
     font-size: 14px;
-		color: #61B2BC;
+	color: #61B2BC;
 }
 
 #mode {
-	padding: 6;
-  /*background-color: #64727D;*/
-  border-bottom: 1px solid #ffffff;
+    padding: 6;
+    /*background-color: #64727D;*/
+    border-bottom: 1px solid #ffffff;
 }
 
 #battery.charging, #battery.plugged {
@@ -135,7 +141,7 @@ label:focus {
 }
 
 #network.disconnected {
-    color: red;
+    color: #dd3366;
 }
 
 #pulseaudio {
@@ -179,6 +185,7 @@ label:focus {
 #clock,
 #language{
     font-size: 14px;
+    color: #CBD6D7;
 }
 
 #custom-wallpaper,
