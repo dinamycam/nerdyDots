@@ -11,7 +11,7 @@
 @define-color bg-selected #26A69A;
 
 *{
-  font-family: FontAwesome, "Noto Sans";
+  font-family: 'Vazirmatn','Font Awesome', 'Noto Sans';
   color: @noti-fg;
 }
 

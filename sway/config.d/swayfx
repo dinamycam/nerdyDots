@@ -1,7 +1,7 @@
 shadows enable
 # blur enable
 
-corner_radius 12
+corner_radius 13
 dim_inactive_colors.unfocused #000000FF
 
 layer_effects "waybar" {

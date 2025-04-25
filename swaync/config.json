@@ -97,8 +97,12 @@
         "position": "left",
         "actions": [
           {
-            "label": "  reload swaync",
+            "label": "  reload config",
             "command": "swaync-client --reload-config"
+          },
+          {
+            "label": "  reload css",
+            "command": "swaync-client --reload-css"
           }
         ]
       }
