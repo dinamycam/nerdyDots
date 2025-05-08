@@ -46,10 +46,10 @@ exec waytrogen -r
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -256,6 +256,25 @@ bindsym $mod+r mode "resize"
 bar {
     position top
     swaybar_command waybar
+}
+
+#
+# Theme
+#
+font pango:CaskaydiaCove NF Bold  10
+
+# border without title bar
+default_border pixel 3
+client.focused #000000 #5e81ac #ffffff
+
+# gtk
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+  gsettings set $gnome-schema gtk-theme Nordic
+  gsettings set $gnome-schema gtk-application-prefer-dark-theme true
+  gsettings set $gnome-schema icon-theme Papirus-Dark
+  gsettings set $gnome-schema cursor-theme Adwaita
 }
 
 include swayfx
