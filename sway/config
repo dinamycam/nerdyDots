@@ -48,7 +48,7 @@ exec waytrogen -r
 #
 exec swayidle -w \
          timeout 300 'swaylock --screenshots --effect-blur 1x5 --clock --indicator-caps-lock --indicator-radius 100 --key-hl-color 880033 --ring-color bb00cc --line-color 00000088 --separator-color 00000000 --grace 5 --fade-in 5' \
-         timeout 600 'systemctl suspend' resume 'swaymsg "output * power on"' \
+         # timeout 600 'systemctl suspend' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock --screenshots --effect-blur 1x5 --clock --indicator-caps-lock --indicator-radius 100 --key-hl-color 880033 --ring-color bb00cc --line-color 00000088 --separator-color 00000000 --grace 5 --fade-in 5'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -271,10 +271,10 @@ client.focused #000000 #5e81ac #ffffff
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-  gsettings set $gnome-schema gtk-theme Nordic
+  gsettings set $gnome-schema gtk-theme Orchis-Dark-Compact
   gsettings set $gnome-schema gtk-application-prefer-dark-theme true
   gsettings set $gnome-schema icon-theme Papirus-Dark
-  gsettings set $gnome-schema cursor-theme Adwaita
+  gsettings set $gnome-schema cursor-theme Pop
 }
 
 include swayfx
