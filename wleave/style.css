@@ -37,11 +37,6 @@ button:hover {
     url("/usr/local/share/wleave/icons/suspend.svg");
 }
 
-#hibernate {
-  background-image: url("/usr/share/wleave/icons/hibernate.svg"),
-    url("/usr/local/share/wleave/icons/hibernate.svg");
-}
-
 #shutdown {
   background-image: url("/usr/share/wleave/icons/shutdown.svg"),
     url("/usr/local/share/wleave/icons/shutdown.svg");
