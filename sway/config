@@ -277,6 +277,7 @@ exec_always {
   gsettings set $gnome-schema cursor-theme Pop
 }
 
-include swayfx
-include $HOME/.config/sway/config.d/*
-include window_rules
+# include $HOME/.config/sway/config.d/*
+include $HOME/.config/sway/config.d/window_rules
+# include $HOME/.config/sway/config.d/swayfx
+include $HOME/.config/sway/config.d/dropdown.conf
