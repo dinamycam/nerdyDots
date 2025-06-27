@@ -6,7 +6,7 @@ everything in my `XDG_CONFIG_HOME`/`$HOME/.config`
     mv .config .config.bak
     `
     - `
-    git clone git@github.com:dinamycam/nerdyDots.git
+    git clone git@github.com:dinamycam/nerdyDots.git .config
     `
 
 
