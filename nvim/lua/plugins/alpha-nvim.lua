@@ -57,7 +57,8 @@ return {
 					"  Projects",
 					-- at this time, telescope-projects has not been loaded, so directly call it
 					-- [[<cmd>lua require('telescope').load_extension('projects').load_commnad('projects')<CR>]]),
-					[[<cmd>lua require('telescope').load_extension('projects')<CR><cmd>Telescope projects<CR>]]
+					-- [[<cmd>lua require('telescope').load_extension('projects')<CR><cmd>Telescope projects<CR>]],
+					":Telescope project<CR>"
 				),
 				dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
 				dashboard.button("l", "鈴 Lazy", ":Lazy<CR>"),
