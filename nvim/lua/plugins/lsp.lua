@@ -2,7 +2,7 @@
 return {
 	"mason-org/mason-lspconfig.nvim",
 	opts = {
-		ensure_installed = { "lua_ls", "pyright", "rust_analyzer" }, -- Example: Automatically install these servers
+		ensure_installed = { "lua_ls", "pyright", "rust_analyzer", "marksman" }, -- Example: Automatically install these servers
 	},
 	dependencies = {
 		{ "mason-org/mason.nvim", opts = {} }, -- Configuration options for Mason
@@ -22,6 +22,17 @@ return {
 		require("mason-lspconfig").setup()
 
 		-- Configure individual LSP servers here
+
+		-- example calling setup directly for each LSP
+		config = function()
+			local capabilities = require("blink.cmp").get_lsp_capabilities()
+			local lspconfig = require("lspconfig")
+
+			lspconfig["lua_ls"].setup({ capabilities = capabilities })
+			lspconfig["pyright"].setup({ capabilities = capabilities })
+			lspconfig["rust_analyzer"].setup({ capabilities = capabilities })
+			lspconfig["marksman"].setup({ capabilities = capabilities })
+		end
 		-- Not needed, as mason-lspconfig autoloads necessary lsp for ft
 	end,
 }
