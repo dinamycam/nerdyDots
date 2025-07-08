@@ -18,7 +18,7 @@ vim.opt.scrolloff = 8 -- Keep 8 lines above/below the cursor
 if vim.g.neovide then
 	-- vim.o.guifont = "Fira Code:h7"
 	vim.opt.linespace = 2
-	vim.g.neovide_scale_factor = 0.5
+	-- vim.g.neovide_scale_factor = 0.5
 
 	vim.g.neovide_floating_blur_amount_x = 2.0
 	vim.g.neovide_floating_blur_amount_y = 2.0
@@ -28,7 +28,7 @@ if vim.g.neovide then
 	vim.g.neovide_light_angle_degrees = 45
 	vim.g.neovide_light_radius = 5
 
-	vim.g.neovide_transparency = 0.92
+	vim.g.neovide_opacity = 0.92
 
 	vim.g.neovide_refresh_rate_idle = 5
 
@@ -49,15 +49,6 @@ if vim.g.neovide then
 end
 
 vim.api.nvim_set_keymap("n", "<F2>", ":set paste!<CR>", { noremap = true, silent = true })
-
-vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true }) -- Toggle file explorer
-vim.api.nvim_set_keymap("n", "<leader>ff", ":Telescope find_files<CR>", { noremap = true }) -- Fuzzy find files
-
--- Load plugins (if using a plugin manager)
--- require('lazy').setup({
---     'hrsh7th/nvim-cmp',               -- Autocompletion
---     'lewis6991/gitsigns.nvim',        -- Git integration
--- })
 
 -- Additional configurations for plugins can go here
 
@@ -113,7 +104,14 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find f
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+vim.api.nvim_set_keymap(
+	"n",
+	"<C-p>",
+	":lua require'telescope'.extensions.project.project{}<CR>",
+	{ noremap = true, silent = true }
+)
 
+vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true }) -- Toggle file explorer
 require("telescope").load_extension("notify")
 require("telescope").load_extension("project")
 -- not configured
