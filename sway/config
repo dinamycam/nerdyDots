@@ -28,6 +28,7 @@ input type:touchpad {
     # Enable tap to click for touchpads
     tap enabled
     # click_method button_areas
+    drag_lock disabled
 }
 
 ### Output configuration
@@ -47,9 +48,9 @@ exec waytrogen -r
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock --screenshots --effect-blur 1x5 --clock --indicator-caps-lock --indicator-radius 100 --key-hl-color 880033 --ring-color bb00cc --line-color 00000088 --separator-color 00000000 --grace 5 --fade-in 5' \
-         # timeout 600 'systemctl suspend' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock --screenshots --effect-blur 1x5 --clock --indicator-caps-lock --indicator-radius 100 --key-hl-color 880033 --ring-color bb00cc --line-color 00000088 --separator-color 00000000 --grace 5 --fade-in 5'
+         timeout 300 'swaylock --screenshots --effect-blur 2x15 --clock --indicator-caps-lock --indicator-radius 100 --key-hl-color 880033 --ring-color bb00cc --line-color 00000088 --separator-color 00000000 --grace 5 --fade-in 5' \
+         timeout 600 'systemctl suspend' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock --screenshots --effect-blur 2x15 --clock --indicator-caps-lock --indicator-radius 100 --key-hl-color 880033 --ring-color bb00cc --line-color 00000088 --separator-color 00000000 --grace 5 --fade-in 5'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when

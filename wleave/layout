@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "swaylock --screenshots --effect-blur 1x5 --clock --indicator-caps-lock --indicator-radius 100 --key-hl-color 880033 --ring-color bb00cc --line-color 00000088 --separator-color 00000000 --grace 5 --fade-in 1",
+    "action" : "swaylock --screenshots --effect-blur 2x10 --clock --indicator-caps-lock --indicator-radius 100 --key-hl-color 880033 --ring-color bb00cc --line-color 00000088 --separator-color 00000000 --fade-in 1",
     "text" : "Lock",
     "keybind" : "l"
 }
