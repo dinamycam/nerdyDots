@@ -13,11 +13,19 @@ wsl = false
 
 [font]
 normal = [] # Will use the bundled Fira Code Nerd Font by default
-size = 14.0
+hinting = "full"
+edging = "antialias"
+size = 11.0
+
+[[font.italic]]
+family = "CaskaydiaCove Nerd Font"
+style = "Italic"
 
 [box-drawing]
 # "font-glyph", "native" or "selected-native"
+# mode = "native"
 mode = "native"
+
 
 [box-drawing.sizes]
 default = [2, 4]  # Thin and thick values respectively, for all sizes
