@@ -266,7 +266,7 @@ font pango:CaskaydiaCove NF Bold  10
 
 # border without title bar
 default_border pixel 3
-client.focused #000000 #5e81ac #ffffff
+client.focused #7f69ac #5f81ac #ffffff
 
 # gtk
 set $gnome-schema org.gnome.desktop.interface
@@ -275,10 +275,10 @@ exec_always {
   gsettings set $gnome-schema gtk-theme Orchis-Dark-Compact
   gsettings set $gnome-schema gtk-application-prefer-dark-theme true
   gsettings set $gnome-schema icon-theme Papirus-Dark
-  gsettings set $gnome-schema cursor-theme Pop
+  gsettings set $gnome-schema cursor-theme Graphite-dark-cursors
 }
 
 # include $HOME/.config/sway/config.d/*
 include $HOME/.config/sway/config.d/window_rules
-# include $HOME/.config/sway/config.d/swayfx
+include $HOME/.config/sway/config.d/swayfx
 include $HOME/.config/sway/config.d/dropdown.conf
