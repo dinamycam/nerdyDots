@@ -16,6 +16,7 @@ $time\
 [ ](fg:#1d2230)\
 \n$character"""
 command_timeout = 3600
+add_newline = false
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
