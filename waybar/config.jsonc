@@ -65,7 +65,7 @@
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": " {icon} {volume}% {format_source}",
         "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": " mute {format_source}",
+        "format-muted": "  {format_source}",
         "format-source": " {volume}%",
         "format-source-muted": " ",
         "format-icons": {
@@ -109,34 +109,36 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
+        "format-charging": "󱟦 {capacity}%",
+        "format-plugged": "󱟢 {capacity}%",
         "format-alt": "{icon} {time}",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "󰂃",
+            "󰁼",
+            "󰁿",
+            "󰂁",
+            "󰂂"
         ]
     },
     "cpu": {
         "interval": 1,
-        "format": "{icon0}{icon1}{icon2}{icon3}",
+        "format": " {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
         "format-icons": [
-            "<span color='#f8f8f2'>▁</span>", // milky
-            "<span color='#2aa987'>▂</span>", // lightgreen
-            "<span color='#2a7987'>▂</span>", // teal
-            "<span color='#efb8f2'>▃</span>", // pink
-            "<span color='#e8b8f2'>▄</span>", // pink
-            "<span color='#ffffa5'>▅</span>", // lightyellow
-            "<span color='#ffffa5'>▆</span>", // light
-            "<span color='#ff9977'>▇</span>", // orange
-            "<span color='#dd532e'>█</span>" // lightred
+            "<span color='#ffcfa2'>▁</span>", // pinky
+            "<span color='#aad9f8'>▂</span>", // lightblue
+            "<span color='#ffda95'>▂</span>", // lightyellow
+            "<span color='#efb862'>▃</span>", // pink
+            "<span color='#ffa8f2'>▄</span>", // more pink
+            "<span color='#bfdfa5'>▅</span>", //  lightmilky
+            "<span color='#2ae098'>▆</span>", // green
+            "<span color='#ffd977'>░</span>", // lightyellow
+            "<span color='#9d5aa5'>▒</span>", // lightpurple
+            "<span color='#9d634e'>▓</span>" // lightred
         ]
     },
     "memory": {
-        "format": " {}%"
+        "interval": 1,
+        "format": " {}%"
     },
     // sway related
     "sway/scratchpad": {
@@ -155,11 +157,11 @@
     },
     "sway/mode": {
         "format": " <span style=\"italic\"> {}</span>",
-        "max-length": 30
+        "max-length": 20
     },
     "sway/window": {
         "format": "{app_id} {title}",
-        "max-length": 50,
+        "max-length": 55,
         "icon": true,
         "rewrite": {
             //"Min (.*)": "🌎 $1",
