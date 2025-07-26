@@ -23,7 +23,6 @@ style = "Italic"
 
 [box-drawing]
 # "font-glyph", "native" or "selected-native"
-# mode = "native"
 mode = "native"
 
 
