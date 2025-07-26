@@ -24,7 +24,7 @@ opacity = 0.9
 padding.x = 0
 padding.y = 0
 
-decorations = "Full"
+decorations = "None"
 decorations_theme_variant = "Dark" # "Light"
 
 [font]
